@@ -7,11 +7,13 @@ import MyArtAndCraftList from "../pages/MyArtAndCraftList/MyArtAndCraftList";
 import PrivateRoute from "./PrivateRoute";
 import ViewDetailsPage from "../pages/ViewDetailsPage/ViewDetailsPage";
 import UpdatePage from "../pages/UpdatePage/UpdatePage";
+import NotFound from "../pages/NotFound/NotFound";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Root />,
+    errorElement:<NotFound/>,
     children: [
       {
         path: "/",
