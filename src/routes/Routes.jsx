@@ -4,6 +4,9 @@ import Home from "../pages/Home/Home";
 import AllArtAndCraftItems from "../pages/AllArtAndCraftItems/AllArtAndCraftItems";
 import AddCraftItem from "../pages/AddCraftItem/AddCraftItem";
 import MyArtAndCraftList from "../pages/MyArtAndCraftList/MyArtAndCraftList";
+import PrivateRoute from "./PrivateRoute";
+import ViewDetailsPage from "../pages/ViewDetailsPage/ViewDetailsPage";
+import UpdatePage from "../pages/UpdatePage/UpdatePage";
 
 const router = createBrowserRouter([
   {
@@ -20,11 +23,35 @@ const router = createBrowserRouter([
       },
       {
         path: "/add-craft-item",
-        element: <AddCraftItem />,
+        element: (
+          <PrivateRoute>
+            <AddCraftItem />
+          </PrivateRoute>
+        ),
       },
       {
         path: "/my-art-craft-list",
-        element:<MyArtAndCraftList/>
+        element: (
+          <PrivateRoute>
+            <MyArtAndCraftList />
+          </PrivateRoute>
+        ),
+      },
+      {
+        path: "/view-details-page",
+        element: (
+          <PrivateRoute>
+            <ViewDetailsPage />
+          </PrivateRoute>
+        ),
+      },
+      {
+        path: "/update-page",
+        element: (
+          <PrivateRoute>
+            <UpdatePage />
+          </PrivateRoute>
+        ),
       },
     ],
   },
