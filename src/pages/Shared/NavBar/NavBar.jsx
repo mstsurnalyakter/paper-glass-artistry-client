@@ -53,14 +53,14 @@ function NavList() {
       </NavLink>
 
       <NavLink
-        to={"/my-art&Craft-list"}
+        to={"/my-art-craft-list"}
         className={({ isActive }) =>
           isActive
             ? "bg-[#9856AC] px-3 py-1  text-white  rounded-lg"
             : "p-2 text-[#131313CC]"
         }
       >
-        My Art&Craft List
+        My Art & Craft List
       </NavLink>
     </List>
   );
