@@ -125,7 +125,6 @@ const AddCraftItem = () => {
                 id="price"
                 name="price"
               />
-
             </div>
             {/* Right side */}
             <div className="flex-1 space-y-4">
@@ -188,7 +187,7 @@ const AddCraftItem = () => {
             </label>
 
             <textarea
-            required
+              required
               id="short_description"
               name="short_description"
               placeholder="Enter Short Description"
@@ -200,7 +199,7 @@ const AddCraftItem = () => {
             className="px-4 w-full py-2 mt-4 rounded  bg-gradient-to-r from-[#3C87C7] via-purple-600 to-[#9856AC] bg-300% text-transparent animate-gradient
               duration-200 text-white cursor-pointer font-semibold"
             type="submit"
-            value="Add Product"
+            value="Add Craft Item"
           />
         </form>
       </div>

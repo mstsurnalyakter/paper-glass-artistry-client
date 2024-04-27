@@ -9,7 +9,7 @@ const useMyArtAndCraftList = () => {
     queryKey: ["myArtAndCraftList"],
     queryFn: async () => {
       const res = await fetch(
-        `http://localhost:5000/paperGlasses/${user.user_email}`
+        `http://localhost:5000/paperGlasses/${user?.email}`
       );
       const data = await res.json();
       return data;
