@@ -13,6 +13,7 @@ const CustomInput = ({ placeholder, type, name, label, id }) => {
         type={type}
         name={name}
         id={id}
+        required
         placeholder={placeholder || label}
       />
     </div>

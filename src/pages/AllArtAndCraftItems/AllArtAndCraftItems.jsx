@@ -68,7 +68,7 @@ const AllArtAndCraftItems = () => {
                       </td>
                       <td className="p-3">
                         <button className="bg-[#9856AC] text-white px-3 py-2">
-                          <Link to="/view-details-page"> View Details</Link>
+                          <Link to={`/view-details-page/${item?._id}`}> View Details</Link>
                         </button>
                       </td>
                     </tr>

@@ -43,7 +43,7 @@ const router = createBrowserRouter([
         ),
       },
       {
-        path: "/view-details-page",
+        path: "/view-details-page/:id",
         element: (
           <PrivateRoute>
             <ViewDetailsPage />
@@ -60,11 +60,11 @@ const router = createBrowserRouter([
       },
       {
         path: "/login",
-        element:<Login/>
+        element: <Login />,
       },
       {
         path: "/register",
-        element:<Register/>
+        element: <Register />,
       },
     ],
   },

@@ -103,6 +103,7 @@ const AddCraftItem = () => {
                 className="w-full p-2 border rounded-md focus:outline-[#9856AC]"
                 type="text"
                 placeholder="Select Subcategory Name"
+                required
               >
                 <option value="">Select Subcategory Name</option>
                 <option value="Card Making">Card Making</option>
@@ -124,6 +125,7 @@ const AddCraftItem = () => {
                 id="price"
                 name="price"
               />
+
             </div>
             {/* Right side */}
             <div className="flex-1 space-y-4">
@@ -136,6 +138,7 @@ const AddCraftItem = () => {
                   maxLength={5}
                   max={5}
                   min={0}
+                  required
                   type="number"
                   placeholder="Enter Rating"
                   id="rating"
@@ -157,6 +160,7 @@ const AddCraftItem = () => {
                 className="w-full p-2 border rounded-md focus:outline-[#9856AC]"
                 type="text"
                 placeholder="Select Customization"
+                required
               >
                 <option value="">Select Customization</option>
                 <option value="Yes">Yes</option>
@@ -165,6 +169,7 @@ const AddCraftItem = () => {
 
               <select
                 name="stockStatus"
+                required
                 id="stockStatus"
                 className="w-full p-2 border rounded-md focus:outline-[#9856AC]"
                 type="text"
@@ -183,6 +188,7 @@ const AddCraftItem = () => {
             </label>
 
             <textarea
+            required
               id="short_description"
               name="short_description"
               placeholder="Enter Short Description"
