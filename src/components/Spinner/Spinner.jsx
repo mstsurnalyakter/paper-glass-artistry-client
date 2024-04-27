@@ -10,7 +10,7 @@ const Spinner = () => {
       innerCircleColor="#3C87C7"
       barColor="#CA4339"
       ariaLabel="circles-with-bar-loading"
-      wrapperStyle={{}}
+     
       wrapperClass=""
       visible={true}
     />

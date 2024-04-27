@@ -1,5 +1,4 @@
 import PropTypes from "prop-types";
-import { createContext, useEffect, useState } from "react";
 import {
   GithubAuthProvider,
   GoogleAuthProvider,
@@ -10,13 +9,14 @@ import {
   signOut,
   updateProfile,
 } from "firebase/auth";
+import { createContext, useEffect, useState } from "react";
 import auth from "../firebase/firebase.config";
 
-//social auth provider
+export const AuthContext = createContext(null);
+
+//Social Auth Provider
 const googleProvider = new GoogleAuthProvider();
 const githubProvider = new GithubAuthProvider();
-
-export const AuthContext = createContext(null);
 
 const FirebaseProvider = ({ children }) => {
   const [user, setUser] = useState(null);
@@ -28,8 +28,7 @@ const FirebaseProvider = ({ children }) => {
     return createUserWithEmailAndPassword(auth, email, password);
   };
 
-  //update User Profile
-
+  //Update user profile
   const updateUserProfile = (fullName, photoURL) => {
     setLoading(true);
     return updateProfile(auth.currentUser, {
@@ -44,7 +43,7 @@ const FirebaseProvider = ({ children }) => {
     return signInWithEmailAndPassword(auth, email, password);
   };
 
-  //Logout
+  //sign out
   const logout = () => {
     setUser(null);
     signOut(auth);
@@ -67,6 +66,7 @@ const FirebaseProvider = ({ children }) => {
     const unsubscribe = onAuthStateChanged(auth, (user) => {
       if (user) {
         setUser(user);
+        console.log(user);
       }
       setLoading(false);
     });
@@ -76,14 +76,13 @@ const FirebaseProvider = ({ children }) => {
 
   const authInfo = {
     createUser,
-    updateUserProfile,
     signInUser,
-    logout,
     googleLogin,
-    user,
-    setUser,
-    loading,
     githubLogin,
+    logout,
+    user,
+    updateUserProfile,
+    loading,
   };
 
   return (

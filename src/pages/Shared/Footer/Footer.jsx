@@ -6,10 +6,10 @@ import {
   FaPhoneAlt,
 } from "react-icons/fa";
 import { AiFillTwitterCircle } from "react-icons/ai";
-import {
-  HiMiniComputerDesktop,
-  HiOutlineBuildingOffice,
-} from "react-icons/hi2";
+// import {
+//   HiMiniComputerDesktop,
+//   HiOutlineBuildingOffice,
+// } from "react-icons/hi2";
 import { MdOutlineMailOutline } from "react-icons/md";
 import { Link } from "react-router-dom";
 
@@ -29,15 +29,13 @@ const Footer = () => {
                 src="https://i.postimg.cc/NjWfVRvm/logo.png"
                 alt=""
               />
-              <h3>PaperGlassArtistry</h3>
+              <h3 className="text-[#e8ded4]">PaperGlassArtistry</h3>
             </div>
           </div>
         </div>
-        <div className="grid grid-cols-2 text-sm gap-x-4 gap-y-8 lg:w-2/3 sm:grid-cols-4">
+        <div className="grid grid-cols-2 text-[#e8ded4] text-sm gap-x-4 gap-y-8 lg:w-2/3 sm:grid-cols-4">
           <div className="space-y-3 col-span-2">
-            <h3 className="tracking-wide uppercase dark:text-gray-900">
-              Contact us
-            </h3>
+            <h3 className="tracking-wide capitalize ">Contact us</h3>
             <ul className="space-y-3">
               <li>
                 <a
@@ -45,7 +43,7 @@ const Footer = () => {
                   className="flex  items-center gap-2"
                   href="#"
                 >
-                  <HiOutlineBuildingOffice className="text-4xl" />
+                  {/* <HiOutlineBuildingOffice className="text-4xl" /> */}
                   <span>
                     987 Andre Plain Suit High Street 838, Lake Chestertown, USA
                   </span>
@@ -77,7 +75,7 @@ const Footer = () => {
                   className="flex  items-center gap-2"
                   href="#"
                 >
-                  <HiMiniComputerDesktop className="text-xl" />
+                  {/* <HiMiniComputerDesktop className="text-xl" /> */}
                   <span>PaperGlassArtistry</span>
                 </a>
               </li>
@@ -85,9 +83,7 @@ const Footer = () => {
           </div>
 
           <div className="space-y-3">
-            <h3 className="tracking-wide uppercase dark:text-gray-900">
-              Useful Links
-            </h3>
+            <h3 className="tracking-wide capitalize ">Useful Links</h3>
             <ul className="space-y-5">
               <li>
                 <Link to={"/"}>Home</Link>
@@ -109,7 +105,7 @@ const Footer = () => {
             </ul>
           </div>
           <div className="space-y-3">
-            <div className="uppercase dark:text-gray-900">Social media</div>
+            <div className="capitalize">Social media</div>
             <div className="flex flex-wrap items-center justify-start space-x-3 text-2xl">
               <a
                 rel="noopener noreferrer"

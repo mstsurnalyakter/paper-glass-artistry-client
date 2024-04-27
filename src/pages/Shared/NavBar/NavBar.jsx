@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import useContextData from "../../../hooks/useContextData";
 
 
@@ -71,6 +71,14 @@ function NavList() {
 const NavBar = () => {
     const [openNav, setOpenNav] = useState(false);
       const {user,logout} = useContextData();
+
+       useEffect(() => {
+         window.addEventListener(
+           "resize",
+           () => window.innerWidth >= 960 && setOpenNav(false)
+         );
+       }, []);
+
    return (
      <div className="shadow-lg sticky top-0 z-50">
        <Navbar className="mx-auto max-w-7xl shadow-none rounded-none px-3 lg:px-2 pt-4 mb-6 lg:py-1">
@@ -131,8 +139,9 @@ const NavBar = () => {
              )}
 
              <div>
-               {user || (
-                 <div className="space-x-2">
+
+               {!user && (
+                 <div className="flex gap-2">
                    <NavLink
                      to={"/login"}
                      className={({ isActive }) =>
@@ -214,8 +223,9 @@ const NavBar = () => {
            )}
 
            <div className="">
-             {user || (
-               <div className="space-y-5">
+
+             {!user && (
+               <div className="flex gap-5 flex-col">
                  <NavLink
                    to={"/login"}
                    className={({ isActive }) =>

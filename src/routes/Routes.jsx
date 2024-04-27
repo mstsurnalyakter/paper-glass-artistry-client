@@ -8,12 +8,15 @@ import PrivateRoute from "./PrivateRoute";
 import ViewDetailsPage from "../pages/ViewDetailsPage/ViewDetailsPage";
 import UpdatePage from "../pages/UpdatePage/UpdatePage";
 import NotFound from "../pages/NotFound/NotFound";
+import Login from "../pages/Login/Login";
+import Register from "../pages/Register/Register";
+// import Login from "../pages/Login/Login";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Root />,
-    errorElement:<NotFound/>,
+    errorElement: <NotFound />,
     children: [
       {
         path: "/",
@@ -54,6 +57,14 @@ const router = createBrowserRouter([
             <UpdatePage />
           </PrivateRoute>
         ),
+      },
+      {
+        path: "/login",
+        element:<Login/>
+      },
+      {
+        path: "/register",
+        element:<Register/>
       },
     ],
   },
