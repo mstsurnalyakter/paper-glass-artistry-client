@@ -1,10 +1,29 @@
+import { useState } from "react";
 import MyItemCard from "../../components/MyItemCard/MyItemCard";
 import Spinner from "../../components/Spinner/Spinner";
 import useMyArtAndCraftList from "../../hooks/useMyArtAndCraftList"
-
+import { IoIosArrowDown } from "react-icons/io";
+import { IoIosArrowUp } from "react-icons/io";
 
 const MyArtAndCraftList = () => {
   const { data, isLoading, refetch } = useMyArtAndCraftList();
+   const [open, setOpen] = useState(false);
+   const [displayItems, setDisplayItems] = useState([]);
+
+
+   const handleItemFilter = (filter) => {
+     if (filter === "all") {
+       setDisplayItems(data);
+     } else if (filter === "Yes") {
+       const yesItem = data.filter((item) => item.customization === "Yes");
+       setDisplayItems(yesItem);
+     } else if (filter === "No") {
+       const noItem = data.filter((item) => item.customization === "No");
+       setDisplayItems(noItem);
+     }
+   };
+
+
 
   if (isLoading) {
     return (
@@ -21,9 +40,31 @@ const MyArtAndCraftList = () => {
         My Art & Craft Lists
       </h1>
 
+      <details className="dropdown">
+        <summary onClick={() => setOpen(!open)} className="m-1 btn">
+          <span className="bg-gradient-to-r from-[#3C87C7] via-purple-600 to-[#9856AC] bg-300% text-transparent animate-gradient bg-clip-text">
+            Filter based on Customization
+          </span>{" "}
+          {open ? <IoIosArrowUp /> : <IoIosArrowDown />}
+        </summary>
+        <ul className="p-2 shadow menu dropdown-content z-[1] bg-base-100 rounded-box w-52">
+          <li onClick={() => handleItemFilter("all")}>
+            <a>All</a>
+          </li>
+          <li onClick={() => handleItemFilter("Yes")}>
+            <a>Yes</a>
+          </li>
+          <li onClick={() => handleItemFilter("No")}>
+            <a>No</a>
+          </li>
+        </ul>
+      </details>
+
       <div className="grid xl:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 grid-cols-1  gap-4 mt-10">
-        {data?.length &&
-          data?.map((item) => <MyItemCard key={item?._id} item={item} />)}
+        {displayItems?.length &&
+          displayItems?.map((item) => (
+            <MyItemCard refetch={refetch} key={item?._id} item={item} />
+          ))}
       </div>
     </div>
   );

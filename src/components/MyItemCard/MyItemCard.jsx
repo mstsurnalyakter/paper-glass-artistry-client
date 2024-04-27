@@ -1,19 +1,42 @@
 
 import PropTypes from 'prop-types'
 import { Link } from 'react-router-dom';
+import Swal from 'sweetalert2';
 
-const MyItemCard = ({item}) => {
+const MyItemCard = ({ item, refetch }) => {
+  const { _id, image, item_name, price, rating, customization, stockStatus } =
+    item || {};
 
+     const handleDelete = (_id) => {
+       Swal.fire({
+         title: "Are you sure?",
+         text: "You won't be able to revert this!",
+         icon: "warning",
+         showCancelButton: true,
+         confirmButtonColor: "#3085d6",
+         cancelButtonColor: "#d33",
+         confirmButtonText: "Yes, delete it!",
+       }).then((result) => {
+         if (result.isConfirmed) {
+           fetch(`http://localhost:5000/paperGlasses/${_id}`, {
+             method: "DELETE",
+           })
+             .then((res) => res.json())
+             .then((data) => {
+               if (data.deletedCount > 0) {
+                 Swal.fire({
+                   title: "Deleted!",
+                   text: "Craft Item has been deleted.",
+                   icon: "success",
+                 });
+                 refetch();
+               }
+             })
+             .catch((error) => console.error(error));
+         }
+       });
+     };
 
-    const {
-        _id,
-      image,
-      item_name,
-      price,
-      rating,
-      customization,
-      stockStatus,
-    } = item || {};
 
   return (
     <div className="">
@@ -66,7 +89,10 @@ const MyItemCard = ({item}) => {
               <button className="bg-[#9856AC] py-2 rounded-md text-white">
                 <Link to={`/update-page/${_id}`}>Update</Link>
               </button>
-              <button className="bg-[#9856AC] py-2 rounded-md text-white">
+              <button
+                onClick={() => handleDelete(_id)}
+                className="bg-[#9856AC] py-2 rounded-md text-white"
+              >
                 Delete
               </button>
             </div>
@@ -75,10 +101,11 @@ const MyItemCard = ({item}) => {
       </div>
     </div>
   );
-}
+};
 
 MyItemCard.propTypes = {
-    item:PropTypes.object.isRequired
+    item:PropTypes.object.isRequired,
+    refetch:PropTypes.func
 }
 
 export default MyItemCard
