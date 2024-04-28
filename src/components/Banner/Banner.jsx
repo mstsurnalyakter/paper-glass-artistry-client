@@ -4,25 +4,29 @@ import "swiper/css";
 import "swiper/css/bundle";
 import "swiper/css/pagination";
 
+import useBanner from "../../hooks/useBanner";
 import Spinner from "../Spinner/Spinner";
-import useData from "../../hooks/useData";
 
 const Banner = () => {
-  const { data, dataLoading } = useData();
 
-  if (dataLoading) {
+const { data, isLoading, refetch } = useBanner();
+
+  if (isLoading) {
     return (
-      <div className="mt-10 w-[300px] mx-auto">
+      <div className="flex items-center justify-center mt-44">
         <Spinner />
       </div>
     );
   }
 
+
+
   return (
     <>
+      ;
       <Swiper
         autoplay={{
-          delay: 2000,
+          delay: 3000,
         }}
         navigation={true}
         pagination={{
@@ -33,131 +37,85 @@ const Banner = () => {
       >
         <SwiperSlide>
           <div
-            className="min-h-[500px]   bg-center  bg-cover  object-cover flex items-center justify-center"
+            className="min-h-[500px]   bg-center  bg-cover  object-cover flex flex-col items-center justify-center"
             style={{
-              backgroundImage: `url(${data[0]?.image[0] || "/villa2.webp"})`,
+              backgroundImage: `url(${data[0]?.image})`,
             }}
           >
-            <h1 className="text-3xl w-5/6 text-center font-bold  text-[#0073e1]">
-              {data[0]?.estate_title}
+            <h1 className="md:text-4xl  text-3xl w-5/6 text-center font-extrabold ">
+              {data[0]?.item_name}
             </h1>
+            <p className="text-lg">{data[0]?.short_description}</p>
           </div>
         </SwiperSlide>
 
         <SwiperSlide>
           <div
-            className="min-h-[500px]   bg-center  bg-cover  object-cover flex items-center justify-center"
+            className="min-h-[500px]   bg-center  bg-cover flex-col object-cover flex items-center justify-center"
             style={{
-              backgroundImage: `url(${data[1]?.image[0] || "/villa2.webp"})`,
+              backgroundImage: `url(${data[1]?.image})`,
             }}
           >
-            <h1 className="text-3xl w-5/6 text-center font-bold  text-[#0073e1]">
-              {data[1]?.estate_title}
+            <h1 className="md:text-4xl  text-3xl w-5/6 text-center font-extrabold">
+              {data[1]?.item_name}
             </h1>
+            <p className="text-lg">{data[1]?.short_description}</p>
           </div>
         </SwiperSlide>
 
         <SwiperSlide>
           <div
-            className="min-h-[500px]   bg-center  bg-cover  object-cover flex items-center justify-center"
+            className="min-h-[500px]   bg-center flex-col  bg-cover  object-cover flex items-center justify-center"
             style={{
-              backgroundImage: `url(${data[2]?.image[0] || "/villa2.webp"})`,
+              backgroundImage: `url(${data[2]?.image})`,
             }}
           >
-            <h1 className="text-3xl w-5/6 text-center font-bold  text-[#0073e1]">
-              {data[2]?.estate_title}
+            <h1 className="md:text-4xl  text-3xl w-5/6 text-center font-extrabold text-[#e8ded4]">
+              {data[2]?.item_name}
             </h1>
+            <p className="text-lg">{data[2]?.short_description}</p>
           </div>
         </SwiperSlide>
 
         <SwiperSlide>
           <div
-            className="min-h-[500px]   bg-center  bg-cover  object-cover flex items-center justify-center"
+            className="min-h-[500px] flex-col   bg-center  bg-cover  object-cover flex items-center justify-center"
             style={{
-              backgroundImage: `url(${data[3]?.image[0] || "/villa2.webp"})`,
+              backgroundImage: `url(${data[3]?.image})`,
             }}
           >
-            <h1 className="text-3xl w-5/6 text-center font-bold  text-[#0073e1]">
-              {data[3]?.estate_title}
+            <h1 className="md:text-4xl  text-3xl w-5/6 text-center font-extrabold text-[#e8ded4]">
+              {data[3]?.item_name}
             </h1>
+            <p>{data[3]?.short_description}</p>
           </div>
         </SwiperSlide>
 
         <SwiperSlide>
           <div
-            className="min-h-[500px]   bg-center  bg-cover  object-cover flex items-center justify-center"
+            className="min-h-[500px] flex-col  bg-center  bg-cover  object-cover flex items-center justify-center"
             style={{
-              backgroundImage: `url(${data[4]?.image[0] || "/villa2.webp"})`,
+              backgroundImage: `url(${data[4]?.image})`,
             }}
           >
-            <h1 className="text-3xl w-5/6 text-center font-bold  text-[#0073e1]">
-              {data[4]?.estate_title}
+            <h1 className="md:text-4xl  text-3xl w-5/6 text-center font-extrabold text-[#e8ded4]">
+              {data[4]?.item_name}
             </h1>
+            <p className="text-lg">{data[4]?.short_description}</p>
           </div>
         </SwiperSlide>
 
         <SwiperSlide>
           <div
-            className="min-h-[500px]   bg-center  bg-cover  object-cover flex items-center justify-center"
+            className="min-h-[500px] flex-col   bg-center  bg-cover  object-cover flex items-center justify-center"
             style={{
-              backgroundImage: `url(${data[5]?.image[0] || "/villa2.webp"})`,
+              backgroundImage: `url(${data[5]?.image})`,
             }}
           >
-            <h1 className="text-3xl w-5/6 text-center font-bold  text-[#0073e1]">
-              {data[5]?.estate_title}
+            <h1 className="md:text-4xl  text-3xl w-5/6 text-center font-extrabold text-[#e8ded4]">
+              {data[5]?.item_name}
             </h1>
-          </div>
-        </SwiperSlide>
-
-        <SwiperSlide>
-          <div
-            className="min-h-[500px]   bg-center  bg-cover  object-cover flex items-center justify-center"
-            style={{
-              backgroundImage: `url(${data[6]?.image[0] || "/villa2.webp"})`,
-            }}
-          >
-            <h1 className="text-3xl w-5/6 text-center font-bold  text-[#0073e1]">
-              {data[6]?.estate_title}
-            </h1>
-          </div>
-        </SwiperSlide>
-
-        <SwiperSlide>
-          <div
-            className="min-h-[500px]   bg-center  bg-cover  object-cover flex items-center justify-center"
-            style={{
-              backgroundImage: `url(${data[7]?.image[0] || "/villa2.webp"})`,
-            }}
-          >
-            <h1 className="text-3xl w-5/6 text-center font-bold  text-[#0073e1]">
-              {data[0]?.estate_title}
-            </h1>
-          </div>
-        </SwiperSlide>
-
-        <SwiperSlide>
-          <div
-            className="min-h-[500px]   bg-center  bg-cover  object-cover flex items-center justify-center"
-            style={{
-              backgroundImage: `url(${data[8]?.image[0] || "/villa2.webp"})`,
-            }}
-          >
-            <h1 className="text-3xl font-bold w-5/6 text-center  text-[#0073e1]">
-              {data[0]?.estate_title}
-            </h1>
-          </div>
-        </SwiperSlide>
-
-        <SwiperSlide>
-          <div
-            className="min-h-[500px]   bg-center  bg-cover  object-cover flex items-center justify-center"
-            style={{
-              backgroundImage: `url(${data[9]?.image[0] || "/villa2.webp"})`,
-            }}
-          >
-            <h1 className="text-3xl font-bold w-5/6 text-center  text-[#0073e1]">
-              {data[0]?.estate_title}
-            </h1>
+            <p className="text-lg">{data[0]?.short_description}</p>
           </div>
         </SwiperSlide>
       </Swiper>

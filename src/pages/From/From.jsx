@@ -1,8 +1,11 @@
 import Swal from "sweetalert2";
 import CustomInput from "../../components/CustomInput/CustomInput";
+import useBanner from "../../hooks/useBanner";
 
 
 const From = () => {
+    const { data, isLoading, refetch } = useBanner()
+    console.log(data);
 
     const handleForm = e =>{
          e.preventDefault();
