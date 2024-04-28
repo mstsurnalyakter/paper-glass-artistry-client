@@ -3,7 +3,7 @@ import useCraftItems from '../../hooks/useCraftItems';
 import CraftItemCard from '../CraftItemCard/CraftItemCard';
 
 const CraftItems = () => {
-     const { data, isLoading, refetch } = useCraftItems();
+     const { data } = useCraftItems();
 
   return (
     <div>

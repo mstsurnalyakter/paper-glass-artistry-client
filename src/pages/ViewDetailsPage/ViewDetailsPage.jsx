@@ -5,6 +5,7 @@ import {
 } from "@material-tailwind/react";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
+import { toast } from "react-toastify";
 
 const ViewDetailsPage = () => {
   const {id} = useParams();
@@ -16,7 +17,7 @@ const ViewDetailsPage = () => {
       .then((data) => {
         setItem(data);
       })
-      .catch((error) => console.error(error));
+      .catch((error) => toast.error(error.message));
   },[id])
 
   const {
@@ -34,7 +35,6 @@ const ViewDetailsPage = () => {
     } = item || {}
 
 
-  console.log(item);
   return (
     <div>
       <Card className="lg:flex-row flex-col w-full shadow-none">

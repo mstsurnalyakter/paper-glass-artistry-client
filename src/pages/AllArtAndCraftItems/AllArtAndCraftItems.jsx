@@ -4,7 +4,7 @@ import useCraftItems from "../../hooks/useCraftItems"
 
 
 const AllArtAndCraftItems = () => {
-  const { data, isLoading, refetch } = useCraftItems();
+  const { data, isLoading } = useCraftItems();
 
   if (isLoading) {
      return (

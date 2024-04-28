@@ -9,7 +9,7 @@ import Spinner from "../Spinner/Spinner";
 
 const Banner = () => {
 
-const { data, isLoading, refetch } = useBanner();
+const { data, isLoading } = useBanner();
 
   if (isLoading) {
     return (

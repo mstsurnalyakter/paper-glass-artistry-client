@@ -21,7 +21,6 @@ const SocialLogin = ({ text }) => {
           navigate(from);
         }, 2000);
       }
-      console.log(result.user)
     });
   };
 

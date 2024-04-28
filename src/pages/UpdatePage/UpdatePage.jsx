@@ -5,6 +5,7 @@ import Swal from "sweetalert2";
 import CustomInput from "../../components/CustomInput/CustomInput";
 import useContextData from "../../hooks/useContextData";
 import useMyArtAndCraftList from "../../hooks/useMyArtAndCraftList";
+import { toast } from "react-toastify";
 
 
 
@@ -22,7 +23,7 @@ const UpdatePage = () => {
        .then((data) => {
          setItem(data);
        })
-       .catch((error) => console.error(error));
+       .catch((error) => toast.error(error.message));
    }, [id]);
 
 
@@ -68,7 +69,6 @@ const UpdatePage = () => {
       })
         .then((res) => res.json())
         .then((data) => {
-          console.log(data);
           if (data?.modifiedCount) {
             Swal.fire({
               title: "Success!",
@@ -78,9 +78,8 @@ const UpdatePage = () => {
             });
             refetch();
           }
-
         })
-        .catch((error) => console.error(error.message));
+        .catch((error) => toast.error(error.message));
    };
 
 

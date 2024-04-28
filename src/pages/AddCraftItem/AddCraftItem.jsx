@@ -2,6 +2,7 @@ import { MdAlarmAdd } from "react-icons/md";
 import CustomInput from "../../components/CustomInput/CustomInput";
 import useContextData from "../../hooks/useContextData";
 import Swal from "sweetalert2";
+import { toast } from "react-toastify";
 
 const AddCraftItem = () => {
 
@@ -49,7 +50,6 @@ const AddCraftItem = () => {
     })
       .then((res) => res.json())
       .then((data) => {
-        console.log(data);
         if (data.insertedId) {
           Swal.fire({
             title: "Success!",
@@ -61,7 +61,7 @@ const AddCraftItem = () => {
         }
       })
       .catch(error=>{
-        console.error(error)
+        toast.error(error.message);
       })
   };
 

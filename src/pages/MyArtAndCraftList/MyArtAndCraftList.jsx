@@ -33,7 +33,6 @@ const MyArtAndCraftList = () => {
     );
   }
 
-  console.log(data);
   return (
     <div>
       <h1 className="bg-gradient-to-r text-center py-10 font-bold text-4xl from-[#3C87C7] via-purple-600 to-[#9856AC] bg-300% text-transparent bg-clip-text animate-gradient">
@@ -66,7 +65,7 @@ const MyArtAndCraftList = () => {
             <MyItemCard refetch={refetch} key={item?._id} item={item} />
           ))}
       </div>
-      
+
     </div>
   );
 }
