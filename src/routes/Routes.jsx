@@ -10,11 +10,11 @@ import UpdatePage from "../pages/UpdatePage/UpdatePage";
 import NotFound from "../pages/NotFound/NotFound";
 import Login from "../pages/Login/Login";
 import Register from "../pages/Register/Register";
-import From from "../pages/From/From";
 import CardMaking from "../pages/CardMaking/CardMaking";
 import Scrapbooking from "../pages/Scrapbooking/Scrapbooking";
 import PaperQuillingOrigami from "../pages/PapeQuilling&Origami/PaperQuillingOrigami";
-// import Login from "../pages/Login/Login";
+import GlassPainting from "../pages/GlassPainting/GlassPainting";
+
 
 const router = createBrowserRouter([
   {
@@ -37,6 +37,10 @@ const router = createBrowserRouter([
       {
         path: "/paper_quilling_&_origami",
         element: <PaperQuillingOrigami />,
+      },
+      {
+        path: "/glass_painting",
+        element: <GlassPainting />,
       },
       {
         path: "/all-art-and-craft-items",

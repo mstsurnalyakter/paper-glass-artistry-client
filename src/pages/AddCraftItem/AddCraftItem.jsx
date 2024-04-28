@@ -113,7 +113,7 @@ const AddCraftItem = () => {
                 <option value="Paper Quilling & origami">
                   Paper Quilling & origami
                 </option>
-                <option value=" Glass Painting"> Glass Painting</option>
+                <option value="Glass Painting">Glass Painting</option>
                 <option value="Lampworking">Lampworking</option>
                 <option value="Glass Dying & Staining">
                   Glass Dying & Staining
@@ -178,7 +178,7 @@ const AddCraftItem = () => {
               >
                 <option value="">Select Stock Status</option>
                 <option value="In stock">In stock</option>
-                <option value=" Made to Order">Made to Order</option>
+                <option value="Made to Order">Made to Order</option>
               </select>
             </div>
           </div>
