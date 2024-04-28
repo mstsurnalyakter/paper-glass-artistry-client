@@ -137,18 +137,18 @@ const NavBar = () => {
                   tabIndex={0}
                   className="mt-44 z-[1] px-5 py-10  border-s-lime-300 shadow menu space-y-3 menu-sm dropdown-content bg-base-100 rounded-box w-96"
                 >
-                  <p className="text-center">
-                    <span className="font-bold">Name:</span>{" "}
+                  <p className="text-center text-[#9856AC]">
+                    <span className="font-bold ">Name:</span>{" "}
                     {user?.displayName || "user name not found"}
                   </p>
-                  <p className="text-center break-words">
+                  <p className="text-center break-words text-[#9856AC]">
                     {" "}
                     <span className="font-bold">Email:</span>{" "}
                     {user?.email || "user email not found"}
                   </p>
                   <button
                     onClick={logout}
-                    className=" border flex items-center justify-center border-[#9856AC] px-3 py-1 rounded-lg"
+                    className=" border flex items-center text-[#9856AC] justify-center border-[#9856AC] px-3 py-1 rounded-lg"
                   >
                     Logout
                   </button>
@@ -235,7 +235,6 @@ const NavBar = () => {
               )}
             </IconButton>
           </div>
-
         </div>
 
         <Collapse open={openNav}>
@@ -261,18 +260,18 @@ const NavBar = () => {
                 tabIndex={0}
                 className="mt-3 z-[1] px-5 py-10 border border-s-lime-300 shadow menu space-y-3 menu-sm dropdown-content bg-base-100 rounded-box w-64"
               >
-                <p className="text-center">
+                <p className="text-center text-[#9856AC]">
                   <span className="font-bold">Name:</span>{" "}
                   {user?.displayName || "user name not found"}
                 </p>
-                <p className="text-center break-words">
+                <p className="text-center break-words text-[#9856AC]">
                   {" "}
                   <span className="font-bold">Email:</span>{" "}
                   {user?.email || "user email not found"}
                 </p>
                 <button
                   onClick={logout}
-                  className="border mx-auto flex items-center justify-center border-[#9856AC] px-3 py-1 rounded-lg"
+                  className="border text-[#9856AC]  mx-auto flex items-center justify-center border-[#9856AC] px-3 py-1 rounded-lg"
                 >
                   Logout
                 </button>
