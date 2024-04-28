@@ -13,6 +13,7 @@ import Register from "../pages/Register/Register";
 import From from "../pages/From/From";
 import CardMaking from "../pages/CardMaking/CardMaking";
 import Scrapbooking from "../pages/Scrapbooking/Scrapbooking";
+import PaperQuillingOrigami from "../pages/PapeQuilling&Origami/PaperQuillingOrigami";
 // import Login from "../pages/Login/Login";
 
 const router = createBrowserRouter([
@@ -25,10 +26,6 @@ const router = createBrowserRouter([
         path: "/",
         element: <Home />,
       },
-      // {
-      //   path: "/banner",
-      //   element: <From />,
-      // },
       {
         path: "/card_making",
         element: <CardMaking />,
@@ -36,6 +33,10 @@ const router = createBrowserRouter([
       {
         path: "/scrapbooking",
         element: <Scrapbooking />,
+      },
+      {
+        path: "/paper_quilling_&_origami",
+        element: <PaperQuillingOrigami />,
       },
       {
         path: "/all-art-and-craft-items",

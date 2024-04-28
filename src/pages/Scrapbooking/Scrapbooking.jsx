@@ -22,7 +22,7 @@ const Scrapbooking = () => {
            </div>
          );
        }
-        console.log(scrapbooking);
+
 
 
   return (
