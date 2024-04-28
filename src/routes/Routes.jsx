@@ -14,6 +14,7 @@ import CardMaking from "../pages/CardMaking/CardMaking";
 import Scrapbooking from "../pages/Scrapbooking/Scrapbooking";
 import PaperQuillingOrigami from "../pages/PapeQuilling&Origami/PaperQuillingOrigami";
 import GlassPainting from "../pages/GlassPainting/GlassPainting";
+import Lampworking from "../pages/Lampworking/Lampworking";
 
 
 const router = createBrowserRouter([
@@ -41,6 +42,10 @@ const router = createBrowserRouter([
       {
         path: "/glass_painting",
         element: <GlassPainting />,
+      },
+      {
+        path: "/lampworking",
+        element: <Lampworking />,
       },
       {
         path: "/all-art-and-craft-items",
