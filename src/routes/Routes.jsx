@@ -16,6 +16,7 @@ import PaperQuillingOrigami from "../pages/PapeQuilling&Origami/PaperQuillingOri
 import GlassPainting from "../pages/GlassPainting/GlassPainting";
 import Lampworking from "../pages/Lampworking/Lampworking";
 import { GlassDyingAndStaining } from "../pages/GlassDyingAndStaining/GlassDyingAndStaining";
+import From from "../pages/From/From";
 
 
 const router = createBrowserRouter([
@@ -27,6 +28,10 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <Home />,
+      },
+      {
+        path: "/from",
+        element: <From />,
       },
       {
         path: "/card_making",
