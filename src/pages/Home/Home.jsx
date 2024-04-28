@@ -1,6 +1,7 @@
 import Banner from "../../components/Banner/Banner";
 import CraftItems from "../../components/CraftItems/CraftItems";
 import DynamicTitle from "../../components/DynamicTitle/DynamicTitle";
+import Subcategories from "../../components/Subcategories/Subcategories";
 
 
 const Home = () => {
@@ -10,6 +11,7 @@ const Home = () => {
       <div>
         <Banner/>
         <CraftItems/>
+        <Subcategories/>
       </div>
     </div>
   );

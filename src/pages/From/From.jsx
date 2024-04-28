@@ -1,10 +1,11 @@
 import Swal from "sweetalert2";
 import CustomInput from "../../components/CustomInput/CustomInput";
 import useBanner from "../../hooks/useBanner";
+import useSubcategory from "../../hooks/useSubcategory";
 
 
 const From = () => {
-    const { data, isLoading, refetch } = useBanner()
+    const { data, isLoading, refetch } = useSubcategory()
     console.log(data);
 
     const handleForm = e =>{
@@ -14,15 +15,17 @@ const From = () => {
 
          const image = form.image.value;
          const item_name = form.item_name.value;
-         const short_description = form.short_description.value;
+         const origins = form.origins.value;
+         const key_elements = form.key_elements.value;
 
          const itemInfo = {
            image,
            item_name,
-           short_description
+           origins,
+           key_elements,
          };
 
-         fetch("http://localhost:5000/banners", {
+         fetch("http://localhost:5000/subcategories", {
            method: "POST",
            headers: { "Content-Type": "application/json" },
            body: JSON.stringify(itemInfo),
@@ -62,15 +65,28 @@ const From = () => {
         />
 
         <div className="mt-4">
-          <label className="block mb-2 " htmlFor="short_description">
-            Short Description
+          <label className="block mb-2 " htmlFor="key_elements">
+            Key Elements
           </label>
 
           <textarea
             required
-            id="short_description"
-            name="short_description"
-            placeholder="Enter Short Description"
+            id="key_elements"
+            name="key_elements"
+            placeholder="Key Elements"
+            className="textarea textarea-bordered w-full focus:outline-[#9856AC]"
+          ></textarea>
+        </div>
+        <div className="mt-4">
+          <label className="block mb-2 " htmlFor="origins">
+            Origins
+          </label>
+
+          <textarea
+            required
+            id="origins"
+            name="origins"
+            placeholder="Origins"
             className="textarea textarea-bordered w-full focus:outline-[#9856AC]"
           ></textarea>
         </div>
