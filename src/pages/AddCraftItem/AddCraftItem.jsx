@@ -59,7 +59,10 @@ const AddCraftItem = () => {
           });
           form.reset();
         }
-      });
+      })
+      .catch(error=>{
+        console.error(error)
+      })
   };
 
   return (
@@ -72,7 +75,6 @@ const AddCraftItem = () => {
               <MdAlarmAdd />
             </span>
             <span className="">
-              <span>{/* {update ? "Update " : "Add "} */}</span>
               Add Craft Item
             </span>
           </p>

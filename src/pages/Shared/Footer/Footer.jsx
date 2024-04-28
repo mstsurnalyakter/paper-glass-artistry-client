@@ -3,14 +3,15 @@ import {
   FaGithub,
   FaInstagram,
   FaLinkedinIn,
-  FaPhoneAlt,
+  // FaPhoneAlt,
 } from "react-icons/fa";
+import { Tooltip } from "react-tooltip";
 import { AiFillTwitterCircle } from "react-icons/ai";
 // import {
 //   HiMiniComputerDesktop,
 //   HiOutlineBuildingOffice,
 // } from "react-icons/hi2";
-import { MdOutlineMailOutline } from "react-icons/md";
+// import { MdOutlineMailOutline } from "react-icons/md";
 import { Link } from "react-router-dom";
 
 const Footer = () => {
@@ -55,7 +56,7 @@ const Footer = () => {
                   className="flex  items-center gap-2"
                   href="tel:+6599887733"
                 >
-                  <FaPhoneAlt className="text-xl" />
+                  {/* <FaPhoneAlt className="text-xl" /> */}
                   <span>+6599887733</span>
                 </a>
               </li>
@@ -65,7 +66,7 @@ const Footer = () => {
                   className="flex  items-center gap-2"
                   href="mailto:paperGlassArtistry@gmail.com"
                 >
-                  <MdOutlineMailOutline className="text-xl" />
+                  {/* <MdOutlineMailOutline className="text-xl" /> */}
                   <span>paperGlassArtistry@gmail.com</span>
                 </a>
               </li>
@@ -110,48 +111,53 @@ const Footer = () => {
               <a
                 rel="noopener noreferrer"
                 href="https://github.com/mstsurnalyakter"
-                title="GitHub"
+                id="gitHub"
                 target="_blank"
                 className="flex items-center p-1"
               >
                 <FaGithub />
               </a>
+              <Tooltip anchorSelect="#gitHub" content="GitHub" />
               <a
                 rel="noopener noreferrer"
                 target="_blank"
                 href="https://twitter.com/mstsurnalyakter"
-                title="Twitter"
+                id="twitter"
                 className="flex items-center p-1"
               >
                 <AiFillTwitterCircle />
               </a>
+              <Tooltip anchorSelect="#twitter" content="Twitter" />
               <a
                 rel="noopener noreferrer"
                 target="_blank"
                 href="https://www.instagram.com/mstsurnalyakte/?hl=en"
-                title="Instagram"
+                id="instagram"
                 className="flex items-center p-1"
               >
                 <FaInstagram />
               </a>
+              <Tooltip anchorSelect="#instagram" content="Instagram" />
               <a
                 rel="noopener noreferrer"
                 target="_blank"
                 href="https://web.facebook.com/mstsurnalyakter"
-                title="Facebook"
+                id="facebook"
                 className="flex items-center p-1"
               >
                 <FaFacebook />
               </a>
+              <Tooltip anchorSelect="#facebook" content="Facebook" />
               <a
                 rel="noopener noreferrer"
                 target="_blank"
                 href="https://www.linkedin.com/in/mst-surnaly-akter/"
-                title="LinkedIn"
+                id="linkedIn"
                 className="flex items-center p-1"
               >
                 <FaLinkedinIn />
               </a>
+              <Tooltip anchorSelect="#linkedIn" content="LinkedIn" />
             </div>
           </div>
         </div>
