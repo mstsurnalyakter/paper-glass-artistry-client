@@ -8,7 +8,7 @@ const TestimonialCard = ({item}) => {
           occupation,
           testimonial
     } = item || {};
-    console.log(item);
+   
 return(
    <div
    className="flex border flex-col justify-center mx-auto   py-6 shadow-md rounded-xl sm:px-12"
