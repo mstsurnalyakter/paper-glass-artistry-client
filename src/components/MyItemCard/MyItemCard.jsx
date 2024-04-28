@@ -3,6 +3,7 @@ import PropTypes from 'prop-types'
 import { Link } from 'react-router-dom';
 import { toast } from 'react-toastify';
 import Swal from 'sweetalert2';
+import { baseURL } from '../../utilities/url';
 
 const MyItemCard = ({ item, refetch }) => {
   const { _id, image, item_name, price, rating, customization, stockStatus } =
@@ -19,7 +20,7 @@ const MyItemCard = ({ item, refetch }) => {
          confirmButtonText: "Yes, delete it!",
        }).then((result) => {
          if (result.isConfirmed) {
-           fetch(`http://localhost:5000/paperGlasses/${_id}`, {
+           fetch(`${baseURL}/paperGlasses/${_id}`, {
              method: "DELETE",
            })
              .then((res) => res.json())

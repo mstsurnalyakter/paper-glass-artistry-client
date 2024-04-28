@@ -7,13 +7,14 @@ import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { toast } from "react-toastify";
 import DynamicTitle from "../../components/DynamicTitle/DynamicTitle";
+import { baseURL } from "../../utilities/url";
 
 const ViewDetailsPage = () => {
   const {id} = useParams();
   const [item,setItem] = useState({});
 
   useEffect(()=>{
-    fetch(`http://localhost:5000/paperGlasses/singleItem/${id}`)
+    fetch(`${baseURL}/paperGlasses/singleItem/${id}`)
       .then((res) => res.json())
       .then((data) => {
         setItem(data);

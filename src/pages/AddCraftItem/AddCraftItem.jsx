@@ -4,6 +4,7 @@ import useContextData from "../../hooks/useContextData";
 import Swal from "sweetalert2";
 import { toast } from "react-toastify";
 import DynamicTitle from "../../components/DynamicTitle/DynamicTitle";
+import { baseURL } from "../../utilities/url";
 
 const AddCraftItem = () => {
 
@@ -44,7 +45,7 @@ const AddCraftItem = () => {
     };
 
 
-    fetch("http://localhost:5000/paperGlasses", {
+    fetch(`${baseURL}/paperGlasses`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(itemInfo),

@@ -7,6 +7,7 @@ import useContextData from "../../hooks/useContextData";
 import useMyArtAndCraftList from "../../hooks/useMyArtAndCraftList";
 import { toast } from "react-toastify";
 import DynamicTitle from "../../components/DynamicTitle/DynamicTitle";
+import { baseURL } from "../../utilities/url";
 
 
 
@@ -19,7 +20,7 @@ const UpdatePage = () => {
    const [item, setItem] = useState({});
 
    useEffect(() => {
-     fetch(`http://localhost:5000/paperGlasses/singleItem/${id}`)
+     fetch(`${baseURL}/paperGlasses/singleItem/${id}`)
        .then((res) => res.json())
        .then((data) => {
          setItem(data);
@@ -61,7 +62,7 @@ const UpdatePage = () => {
      };
 
 
-      fetch(`http://localhost:5000/paperGlasses/${id}`, {
+      fetch(`${baseURL}/paperGlasses/${id}`, {
         method: "PUT",
         headers: {
           "Content-Type": "application/json",
