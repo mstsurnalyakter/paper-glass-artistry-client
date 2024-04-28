@@ -10,17 +10,21 @@ const MyArtAndCraftList = () => {
   const { data, isLoading, refetch } = useMyArtAndCraftList();
    const [open, setOpen] = useState(false);
    const [displayItems, setDisplayItems] = useState([]);
+   const [toggle, setToggle] = useState(false);
 
 
    const handleItemFilter = (filter) => {
      if (filter === "all") {
        setDisplayItems(data);
+       setToggle(true);
      } else if (filter === "Yes") {
        const yesItem = data.filter((item) => item.customization === "Yes");
        setDisplayItems(yesItem);
+       setToggle(true);
      } else if (filter === "No") {
        const noItem = data.filter((item) => item.customization === "No");
        setDisplayItems(noItem);
+       setToggle(true);
      }
    };
 
@@ -61,12 +65,21 @@ const MyArtAndCraftList = () => {
         </ul>
       </details>
 
-      <div className="grid xl:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 grid-cols-1  gap-4 mt-10">
-        {displayItems?.length &&
-          displayItems?.map((item) => (
-            <MyItemCard refetch={refetch} key={item?._id} item={item} />
-          ))}
-      </div>
+      {toggle ? (
+        <div className="grid xl:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 grid-cols-1  gap-4 mt-10">
+          {displayItems?.length &&
+            displayItems?.map((item) => (
+              <MyItemCard refetch={refetch} key={item?._id} item={item} />
+            ))}
+        </div>
+      ) : (
+        <div className="grid xl:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 grid-cols-1  gap-4 mt-10">
+          {data?.length &&
+            data?.map((item) => (
+              <MyItemCard refetch={refetch} key={item?._id} item={item} />
+            ))}
+        </div>
+      )}
     </div>
   );
 }
