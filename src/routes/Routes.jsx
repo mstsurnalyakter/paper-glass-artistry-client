@@ -12,6 +12,7 @@ import Login from "../pages/Login/Login";
 import Register from "../pages/Register/Register";
 import From from "../pages/From/From";
 import CardMaking from "../pages/CardMaking/CardMaking";
+import Scrapbooking from "../pages/Scrapbooking/Scrapbooking";
 // import Login from "../pages/Login/Login";
 
 const router = createBrowserRouter([
@@ -31,6 +32,10 @@ const router = createBrowserRouter([
       {
         path: "/card_making",
         element: <CardMaking />,
+      },
+      {
+        path: "/scrapbooking",
+        element: <Scrapbooking />,
       },
       {
         path: "/all-art-and-craft-items",
