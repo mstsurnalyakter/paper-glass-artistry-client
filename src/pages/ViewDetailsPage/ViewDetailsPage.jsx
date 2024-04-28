@@ -6,6 +6,7 @@ import {
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { toast } from "react-toastify";
+import DynamicTitle from "../../components/DynamicTitle/DynamicTitle";
 
 const ViewDetailsPage = () => {
   const {id} = useParams();
@@ -37,6 +38,7 @@ const ViewDetailsPage = () => {
 
   return (
     <div>
+      <DynamicTitle pageTitle="View Details Page" />
       <Card className="lg:flex-row flex-col w-full shadow-none">
         <CardHeader
           shadow={false}
@@ -54,17 +56,11 @@ const ViewDetailsPage = () => {
             {item_name}
           </h2>
           <div className="flex items-center gap-5">
-            <span>
-              By : {user_name}
-            </span>
-            <span>
-              Email : {user_email}
-            </span>
+            <span>By : {user_name}</span>
+            <span>Email : {user_email}</span>
           </div>
           <div className="border-b-2 border-[#13131326]"></div>
-          <span className="mb-4">
-            {subcategory_Name}
-          </span>
+          <span className="mb-4">{subcategory_Name}</span>
           <div className="border-b-2 border-[#13131326]"></div>
           <span>
             <b className="font-bold">Description:</b> {short_description}

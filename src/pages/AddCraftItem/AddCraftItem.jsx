@@ -3,6 +3,7 @@ import CustomInput from "../../components/CustomInput/CustomInput";
 import useContextData from "../../hooks/useContextData";
 import Swal from "sweetalert2";
 import { toast } from "react-toastify";
+import DynamicTitle from "../../components/DynamicTitle/DynamicTitle";
 
 const AddCraftItem = () => {
 
@@ -67,6 +68,7 @@ const AddCraftItem = () => {
 
   return (
     <div className="pt-10">
+      <DynamicTitle pageTitle="Add Craft Item" />
       <div className="shadow-lg p-5 border dark:bg-[#1a2641d5]">
         {/* Heading */}
         <div className="mt-5 mb-8">
@@ -74,9 +76,7 @@ const AddCraftItem = () => {
             <span className="mr-3 text-[#9856AC]">
               <MdAlarmAdd />
             </span>
-            <span className="">
-              Add Craft Item
-            </span>
+            <span className="">Add Craft Item</span>
           </p>
         </div>
         {/* form */}

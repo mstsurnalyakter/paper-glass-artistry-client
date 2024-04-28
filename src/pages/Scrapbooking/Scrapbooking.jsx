@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import useCraftItems from "../../hooks/useCraftItems";
 import Spinner from "../../components/Spinner/Spinner";
 import CraftItemCard from "../../components/CraftItemCard/CraftItemCard";
+import DynamicTitle from "../../components/DynamicTitle/DynamicTitle";
 
 
 const Scrapbooking = () => {
@@ -27,6 +28,7 @@ const Scrapbooking = () => {
 
   return (
     <div>
+      <DynamicTitle pageTitle="Scrapbooking" />
       <h1 className="bg-gradient-to-r mt-10 text-center py-10 font-bold text-4xl from-[#3C87C7] via-purple-600 to-[#9856AC] bg-300% text-transparent bg-clip-text animate-gradient">
         Scrapbooking
       </h1>

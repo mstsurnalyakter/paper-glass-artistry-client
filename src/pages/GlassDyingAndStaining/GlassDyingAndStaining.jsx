@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import Spinner from '../../components/Spinner/Spinner';
 import useCraftItems from '../../hooks/useCraftItems';
 import CraftItemCard from '../../components/CraftItemCard/CraftItemCard';
+import DynamicTitle from '../../components/DynamicTitle/DynamicTitle';
 
 export const GlassDyingAndStaining = () => {
 
@@ -26,6 +27,7 @@ export const GlassDyingAndStaining = () => {
 
      return (
        <div>
+         <DynamicTitle pageTitle="Glass Dying & Staining" />
          <h1 className="bg-gradient-to-r mt-10 text-center py-10 font-bold text-4xl from-[#3C87C7] via-purple-600 to-[#9856AC] bg-300% text-transparent bg-clip-text animate-gradient">
            Glass Dying & Staining
          </h1>

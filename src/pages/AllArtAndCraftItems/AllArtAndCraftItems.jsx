@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import Spinner from "../../components/Spinner/Spinner";
 import useCraftItems from "../../hooks/useCraftItems"
+import DynamicTitle from "../../components/DynamicTitle/DynamicTitle";
 
 
 const AllArtAndCraftItems = () => {
@@ -15,6 +16,7 @@ const AllArtAndCraftItems = () => {
   }
   return (
     <div>
+      <DynamicTitle pageTitle="All Art & Craft Items" />
       <h1 className="bg-gradient-to-r text-center py-10 font-bold text-4xl from-[#3C87C7] via-purple-600 to-[#9856AC] bg-300% text-transparent bg-clip-text animate-gradient">
         {" "}
         All Art & Craft Items
@@ -68,7 +70,10 @@ const AllArtAndCraftItems = () => {
                       </td>
                       <td className="p-3">
                         <button className="bg-[#9856AC] text-white px-3 py-2">
-                          <Link to={`/view-details-page/${item?._id}`}> View Details</Link>
+                          <Link to={`/view-details-page/${item?._id}`}>
+                            {" "}
+                            View Details
+                          </Link>
                         </button>
                       </td>
                     </tr>

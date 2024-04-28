@@ -4,6 +4,7 @@ import Spinner from "../../components/Spinner/Spinner";
 import useMyArtAndCraftList from "../../hooks/useMyArtAndCraftList"
 import { IoIosArrowDown } from "react-icons/io";
 import { IoIosArrowUp } from "react-icons/io";
+import DynamicTitle from "../../components/DynamicTitle/DynamicTitle";
 
 const MyArtAndCraftList = () => {
   const { data, isLoading, refetch } = useMyArtAndCraftList();
@@ -35,6 +36,7 @@ const MyArtAndCraftList = () => {
 
   return (
     <div>
+      <DynamicTitle pageTitle="My Art & Craft Lists" />
       <h1 className="bg-gradient-to-r text-center py-10 font-bold text-4xl from-[#3C87C7] via-purple-600 to-[#9856AC] bg-300% text-transparent bg-clip-text animate-gradient">
         My Art & Craft Lists
       </h1>
@@ -65,7 +67,6 @@ const MyArtAndCraftList = () => {
             <MyItemCard refetch={refetch} key={item?._id} item={item} />
           ))}
       </div>
-
     </div>
   );
 }

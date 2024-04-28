@@ -6,6 +6,7 @@ import CustomInput from "../../components/CustomInput/CustomInput";
 import useContextData from "../../hooks/useContextData";
 import useMyArtAndCraftList from "../../hooks/useMyArtAndCraftList";
 import { toast } from "react-toastify";
+import DynamicTitle from "../../components/DynamicTitle/DynamicTitle";
 
 
 
@@ -98,6 +99,7 @@ const UpdatePage = () => {
 
   return (
     <div className="pt-10">
+      <DynamicTitle pageTitle="Update Page" />
       <div className="shadow-lg p-5 border dark:bg-[#1a2641d5]">
         <div className="mt-5 mb-8">
           <p className="flex items-center justify-center text-3xl font-semibold bg-gradient-to-r from-[#3C87C7] via-purple-600 to-[#9856AC] bg-300% text-transparent bg-clip-text animate-gradient">
