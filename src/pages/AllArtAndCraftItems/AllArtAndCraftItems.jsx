@@ -31,7 +31,6 @@ const AllArtAndCraftItems = () => {
               <col />
               <col />
               <col />
-              <col />
             </colgroup>
             <thead className="dark:bg-gray-300">
               <tr className="text-left border-b border-[#9856AC] border-opacity-20 text-[#9856AC] ">
@@ -40,7 +39,6 @@ const AllArtAndCraftItems = () => {
                 <th className="p-3">Subcategory Name</th>
                 <th className="p-3"> Price</th>
                 <th className="p-3">Rating</th>
-                <th className="p-3">Stock Status</th>
                 <th className="p-3"></th>
               </tr>
             </thead>
@@ -64,9 +62,6 @@ const AllArtAndCraftItems = () => {
                       </td>
                       <td className="p-3">
                         <p>{item?.rating}</p>
-                      </td>
-                      <td className="p-3">
-                        <p>{item?.stockStatus}</p>
                       </td>
                       <td className="p-3">
                         <button className="bg-[#9856AC] text-white px-3 py-2">
