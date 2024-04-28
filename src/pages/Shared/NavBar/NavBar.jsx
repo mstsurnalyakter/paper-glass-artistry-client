@@ -100,7 +100,7 @@ const NavBar = () => {
   return (
     <div className="shadow-lg sticky top-0 z-50">
       <Navbar className="mx-auto max-w-7xl shadow-none rounded-none px-3 lg:px-2 pt-4 mb-6 lg:py-1">
-        <div className="flex items-center justify-between text-blue-gray-900">
+        <div className="flex items-center justify-between">
           <Typography className="mr-4 cursor-pointer py-1.5 lg:ml-2 flex items-center">
             <img
               className="w-20"
@@ -148,7 +148,7 @@ const NavBar = () => {
                   </p>
                   <button
                     onClick={logout}
-                    className="text-[#131313CC] border flex items-center justify-center border-[#9856AC] px-3 py-1 rounded-lg"
+                    className=" border flex items-center justify-center border-[#9856AC] px-3 py-1 rounded-lg"
                   >
                     Logout
                   </button>
@@ -242,7 +242,7 @@ const NavBar = () => {
           <NavList />
 
           {user && (
-            <div className="dropdown flex  w-10 text-black mb-5 dropdown-hover mx-auto items-center dropdown-end">
+            <div className="dropdown flex  w-10  mb-5 dropdown-hover mx-auto items-center dropdown-end">
               <div
                 tabIndex={0}
                 role="button"
@@ -272,7 +272,7 @@ const NavBar = () => {
                 </p>
                 <button
                   onClick={logout}
-                  className="text-[#131313CC] border mx-auto flex items-center justify-center border-[#9856AC] px-3 py-1 rounded-lg"
+                  className="border mx-auto flex items-center justify-center border-[#9856AC] px-3 py-1 rounded-lg"
                 >
                   Logout
                 </button>

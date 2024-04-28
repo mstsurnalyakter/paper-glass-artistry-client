@@ -23,7 +23,7 @@ const { data, isLoading } = useBanner();
 
   return (
     <>
-      ;
+      
       <Swiper
         autoplay={{
           delay: 3000,
