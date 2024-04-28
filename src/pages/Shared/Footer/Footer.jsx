@@ -164,7 +164,7 @@ const Footer = () => {
       </div>
       <div className="border-b-2 border-[#13131326]"></div>
       <div className="py-6 text-sm text-center dark:text-gray-600">
-        <p>
+        <p className="text-[#e8ded4]">
           Copyright © {new Date().getFullYear()} - All right reserved by{" "}
           <span>PaperGlassArtistry</span>
         </p>
