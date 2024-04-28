@@ -107,7 +107,7 @@ const NavBar = () => {
               src="https://i.postimg.cc/NjWfVRvm/logo.png"
               alt=""
             />
-            <span className="text-lg font-bold md:text-2xl">
+            <span className="text-lg text-black font-bold md:text-2xl">
               PaperGlassArtistry
             </span>
           </Typography>

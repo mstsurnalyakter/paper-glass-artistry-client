@@ -1,15 +1,11 @@
 import { MdAlarmAdd } from "react-icons/md";
 import CustomInput from "../../components/CustomInput/CustomInput";
-import useContextData from "../../hooks/useContextData";
 import Swal from "sweetalert2";
 import { toast } from "react-toastify";
 import DynamicTitle from "../../components/DynamicTitle/DynamicTitle";
 import { baseURL } from "../../utilities/url";
 
 const AddCraftItem = () => {
-
-  const {user} = useContextData();
-
 
 
   const handleAddCraftItem = (e) => {
@@ -22,13 +18,13 @@ const AddCraftItem = () => {
     const subcategory_Name = form.subcategory_Name.value;
     const price = form.price.value;
     const rating = form.rating.value;
+    const user_name = form.userName.value;
+    const user_email = form.userEmail.value;
     const processing_time = form.processing_time.value;
     const customization = form.customization.value;
     const stockStatus = form.stockStatus.value;
     const short_description = form.short_description.value;
 
-    const user_email = user.email;
-    const user_name = user.displayName;
 
     const itemInfo = {
       image,
@@ -43,6 +39,8 @@ const AddCraftItem = () => {
       user_name,
       user_email,
     };
+
+    console.log(itemInfo);
 
 
     fetch(`${baseURL}/paperGlasses`, {
@@ -128,9 +126,7 @@ const AddCraftItem = () => {
                 id="price"
                 name="price"
               />
-            </div>
-            {/* Right side */}
-            <div className="flex-1 space-y-4">
+
               <div>
                 <label className="block mt-4 mb-2 " htmlFor="rating">
                   Rating
@@ -147,7 +143,9 @@ const AddCraftItem = () => {
                   name="rating"
                 />
               </div>
-
+            </div>
+            {/* Right side */}
+            <div className="flex-1 space-y-4">
               <CustomInput
                 type="text"
                 placeholder="Enter Processing Time"
@@ -181,6 +179,21 @@ const AddCraftItem = () => {
                 <option value="In stock">In stock</option>
                 <option value="Made to Order">Made to Order</option>
               </select>
+
+              <CustomInput
+                type="text"
+                placeholder="User Name"
+                label="User Name"
+                id="userName"
+                name="userName"
+              />
+              <CustomInput
+                type="text"
+                placeholder="User Email"
+                label="User Email"
+                id="userEmail"
+                name="userEmail"
+              />
             </div>
           </div>
 
