@@ -1,7 +1,6 @@
 import  { useEffect, useState } from 'react'
 import useCraftItems from '../../hooks/useCraftItems';
 import Spinner from '../../components/Spinner/Spinner';
-import CraftItemCard from '../../components/CraftItemCard/CraftItemCard';
 import DynamicTitle from '../../components/DynamicTitle/DynamicTitle';
 import Card from '../../components/Card/Card';
 
