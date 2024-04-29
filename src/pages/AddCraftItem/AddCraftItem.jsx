@@ -128,7 +128,7 @@ const AddCraftItem = () => {
               />
 
               <div>
-                <label className="block mt-4 mb-2 " htmlFor="rating">
+                <label className="block  mb-2 " htmlFor="rating">
                   Rating
                 </label>
                 <input
@@ -145,7 +145,7 @@ const AddCraftItem = () => {
               </div>
             </div>
             {/* Right side */}
-            <div className="flex-1 space-y-4">
+            <div className="flex-1 space-y-6">
               <CustomInput
                 type="text"
                 placeholder="Enter Processing Time"
