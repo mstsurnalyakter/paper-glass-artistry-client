@@ -3,22 +3,21 @@ import {
   FaGithub,
   FaInstagram,
   FaLinkedinIn,
-  // FaPhoneAlt,
+
 } from "react-icons/fa";
 import { Tooltip } from "react-tooltip";
 import { AiFillTwitterCircle } from "react-icons/ai";
-// import {
-//   HiMiniComputerDesktop,
-//   HiOutlineBuildingOffice,
-// } from "react-icons/hi2";
-// import { MdOutlineMailOutline } from "react-icons/md";
+
 import { Link } from "react-router-dom";
 
+
 const Footer = () => {
+
   return (
+
     <footer
       className="px-4 divide-y
-     bg-gradient-to-r from-[#3C87C7] via-purple-600 to-[#9856AC] bg-300% text-transparent animate-gradient
+     bg-gradient-to-r from-[#3C87C7] dark:bg-[#1D232A] via-purple-600 to-[#9856AC] bg-300% text-transparent animate-gradient
     text-[#e8ded4] py-4"
     >
       <div className="container flex flex-col justify-between py-10 mx-auto space-y-8 lg:flex-row lg:space-y-0">
