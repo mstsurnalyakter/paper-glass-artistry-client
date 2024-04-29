@@ -1,8 +1,8 @@
-import React, { useEffect, useState } from 'react'
+import  { useEffect, useState } from 'react'
 import useCraftItems from '../../hooks/useCraftItems';
 import Spinner from '../../components/Spinner/Spinner';
-import CraftItemCard from '../../components/CraftItemCard/CraftItemCard';
 import DynamicTitle from '../../components/DynamicTitle/DynamicTitle';
+import Card from '../../components/Card/Card';
 
 const PaperQuillingOrigami = () => {
 
@@ -35,7 +35,7 @@ const PaperQuillingOrigami = () => {
 
       <div className="grid  xl:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 grid-cols-1  gap-4 ">
         {items?.length &&
-          items?.map((item) => <CraftItemCard key={item?._id} item={item} />)}
+          items?.map((item) => <Card key={item?._id} item={item} />)}
       </div>
     </div>
   );
