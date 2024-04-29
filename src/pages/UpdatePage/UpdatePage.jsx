@@ -74,7 +74,7 @@ const UpdatePage = () => {
           if (data?.modifiedCount) {
             Swal.fire({
               title: "Success!",
-              text: "Craft Item Update Successfully",
+              text: "Art & Craft Item Update Successfully",
               icon: "success",
               confirmButtonText: "Cool",
             });
@@ -107,7 +107,7 @@ const UpdatePage = () => {
             <span className="mr-3 text-[#9856AC]">
               <MdAlarmAdd />
             </span>
-            <span className="">Update Craft Item</span>
+            <span className="">Update Art & Craft Item</span>
           </p>
         </div>
         <form onSubmit={handleUpdate}>
@@ -246,7 +246,7 @@ const UpdatePage = () => {
             className="px-4 w-full py-2 mt-4 rounded  bg-gradient-to-r from-[#3C87C7] via-purple-600 to-[#9856AC] bg-300% text-transparent animate-gradient
               duration-200 text-white cursor-pointer font-semibold"
             type="submit"
-            value="Update Craft Item"
+            value="Update"
           />
         </form>
       </div>
