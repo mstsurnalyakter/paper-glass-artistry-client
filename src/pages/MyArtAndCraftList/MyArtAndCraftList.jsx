@@ -67,14 +67,14 @@ const MyArtAndCraftList = () => {
 
       {toggle ? (
         <div className="grid xl:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 grid-cols-1  gap-4 mt-10">
-          {displayItems?.length &&
+          {displayItems?.length >0 &&
             displayItems?.map((item) => (
               <MyItemCard refetch={refetch} key={item?._id} item={item} />
             ))}
         </div>
       ) : (
         <div className="grid xl:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 grid-cols-1  gap-4 mt-10">
-          {data?.length &&
+          {data?.length >0 &&
             data?.map((item) => (
               <MyItemCard refetch={refetch} key={item?._id} item={item} />
             ))}
