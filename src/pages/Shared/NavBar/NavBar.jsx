@@ -71,24 +71,24 @@ function NavList() {
 const NavBar = () => {
   const [openNav, setOpenNav] = useState(false);
   const { user, logout } = useContextData();
-  const [theme, setTheme] = useState("light");
 
+    const [theme, setTheme] = useState(() => {
+      // Retrieve the theme from local storage or default to "light"
+      const storedTheme = localStorage.getItem("theme");
+      return storedTheme || "light";
+    });
 
-  const handleToggle = (e) => {
-    if (e.target.checked) {
-      setTheme("dark");
-    } else {
-      setTheme("light");
-    }
-  };
+    const handleToggle = () => {
+      // Toggle the theme directly when the icon is clicked
+      setTheme((prevTheme) => (prevTheme === "light" ? "dark" : "light"));
+    };
 
-   useEffect(() => {
-     localStorage.setItem("theme", theme);
-     const localTheme = localStorage.getItem("theme");
+    useEffect(() => {
+      // Update local storage and apply the theme
+      localStorage.setItem("theme", theme);
+      document.querySelector("html").setAttribute("data-theme", theme);
+    }, [theme]);
 
-     // add custom data-theme attribute
-     document.querySelector("html").setAttribute("data-theme", localTheme);
-   }, [theme]);
 
   useEffect(() => {
     window.addEventListener(
@@ -187,6 +187,7 @@ const NavBar = () => {
             <label className="cursor-pointer grid place-items-center">
               <input
                 type="checkbox"
+                checked={theme === "dark"}
                 onChange={handleToggle}
                 className="toggle theme-controller bg-base-content row-start-1 col-start-1 col-span-2"
               />
