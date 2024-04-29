@@ -215,7 +215,7 @@ const AddCraftItem = () => {
             className="px-4 w-full py-2 mt-4 rounded  bg-gradient-to-r from-[#3C87C7] via-purple-600 to-[#9856AC] bg-300% text-transparent animate-gradient
               duration-200 text-white cursor-pointer font-semibold"
             type="submit"
-            value="Add Art & Craft Item"
+            value="Add"
           />
         </form>
       </div>
