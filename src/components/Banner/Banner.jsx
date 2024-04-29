@@ -23,7 +23,6 @@ const { data, isLoading } = useBanner();
 
   return (
     <>
-      
       <Swiper
         autoplay={{
           delay: 3000,
@@ -45,7 +44,9 @@ const { data, isLoading } = useBanner();
             <h1 className="md:text-4xl  text-3xl w-5/6 text-center font-extrabold ">
               {data[0]?.item_name}
             </h1>
-            <p className="text-lg">{data[0]?.short_description}</p>
+            <p className="text-lg font-medium mt-12 w-5/6 mx-auto text-[#1D232A] text-center">
+              {data[0]?.short_description}
+            </p>
           </div>
         </SwiperSlide>
 
@@ -59,7 +60,9 @@ const { data, isLoading } = useBanner();
             <h1 className="md:text-4xl  text-3xl w-5/6 text-center font-extrabold">
               {data[1]?.item_name}
             </h1>
-            <p className="text-lg">{data[1]?.short_description}</p>
+            <p className="text-lg font-medium mt-12 w-5/6 mx-auto text-[#1D232A] text-center">
+              {data[1]?.short_description}
+            </p>
           </div>
         </SwiperSlide>
 
@@ -73,7 +76,9 @@ const { data, isLoading } = useBanner();
             <h1 className="md:text-4xl  text-3xl w-5/6 text-center font-extrabold text-[#e8ded4]">
               {data[2]?.item_name}
             </h1>
-            <p className="text-lg">{data[2]?.short_description}</p>
+            <p className="text-lg font-medium mt-12 w-5/6 mx-auto text-[#e8ded4] text-center">
+              {data[2]?.short_description}
+            </p>
           </div>
         </SwiperSlide>
 
@@ -87,7 +92,9 @@ const { data, isLoading } = useBanner();
             <h1 className="md:text-4xl  text-3xl w-5/6 text-center font-extrabold text-[#e8ded4]">
               {data[3]?.item_name}
             </h1>
-            <p>{data[3]?.short_description}</p>
+            <p className="text-lg font-medium mt-12 w-5/6 mx-auto text-#e8ded4] text-center">
+              {data[3]?.short_description}
+            </p>
           </div>
         </SwiperSlide>
 
@@ -101,7 +108,9 @@ const { data, isLoading } = useBanner();
             <h1 className="md:text-4xl  text-3xl w-5/6 text-center font-extrabold text-[#e8ded4]">
               {data[4]?.item_name}
             </h1>
-            <p className="text-lg">{data[4]?.short_description}</p>
+            <p className="text-lg font-medium mt-12 w-5/6 mx-auto text-[#e8ded4] text-center">
+              {data[4]?.short_description}
+            </p>
           </div>
         </SwiperSlide>
 
@@ -115,7 +124,9 @@ const { data, isLoading } = useBanner();
             <h1 className="md:text-4xl  text-3xl w-5/6 text-center font-extrabold text-[#e8ded4]">
               {data[5]?.item_name}
             </h1>
-            <p className="text-lg">{data[0]?.short_description}</p>
+            <p className="text-lg font-medium mt-12 w-5/6 mx-auto text-[#e8ded4] text-center">
+              {data[0]?.short_description}
+            </p>
           </div>
         </SwiperSlide>
       </Swiper>

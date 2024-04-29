@@ -9,7 +9,7 @@ Welcome to PaperGlassArtistry!
 ## Features
 
 - **Art & Craft Categories Section**: Users can Browse Art & Craft items by sub categories.
-- **Explore Craft Items Selection**: Explore our curated collection of paper crafts and glass art pieces, each handcrafted with precision and care.
+- **Craft Items Selection**: Explore our curated collection of paper crafts and glass art pieces, each handcrafted with precision and care.
 - **Testimonials**: Hear from our satisfied customers and discover why they love our products.
 - **Responsive Design**: Enjoy a seamless browsing experience across all devices, from desktops to smartphones.
 - **Easy Navigation**: Our intuitive navigation makes it effortless to find the perfect art piece for your needs.
