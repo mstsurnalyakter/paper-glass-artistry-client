@@ -53,7 +53,7 @@ const AddCraftItem = () => {
         if (data.insertedId) {
           Swal.fire({
             title: "Success!",
-            text: "Craft Item Added Successfully",
+            text: "Art & Craft Item Added Successfully",
             icon: "success",
             confirmButtonText: "Cool",
           });
