@@ -8,16 +8,20 @@ import { useParams } from "react-router-dom";
 import { toast } from "react-toastify";
 import DynamicTitle from "../../components/DynamicTitle/DynamicTitle";
 import { baseURL } from "../../utilities/url";
+import Spinner from "../../components/Spinner/Spinner";
 
 const ViewDetailsPage = () => {
   const {id} = useParams();
+  const [isLoading,setLoading] = useState(false)
   const [item,setItem] = useState({});
 
   useEffect(()=>{
+    setLoading(true)
     fetch(`${baseURL}/paperGlasses/singleItem/${id}`)
       .then((res) => res.json())
       .then((data) => {
         setItem(data);
+        setLoading(false)
       })
       .catch((error) => toast.error(error.message));
   },[id])
@@ -35,6 +39,14 @@ const ViewDetailsPage = () => {
       user_name,
       user_email,
     } = item || {}
+
+      if (isLoading) {
+        return (
+          <div className="flex items-center justify-center mt-44">
+            <Spinner />
+          </div>
+        );
+      }
 
 
   return (
