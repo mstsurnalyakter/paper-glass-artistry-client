@@ -2,9 +2,15 @@
 
 Welcome to PaperGlassArtistry!
 
-## Live Site
 
-[Visit PaperGlassArtistry](https://paper-glass-artistry-client.web.app).
+
+- **Live Site URL:**[PaperGlassArtistry](https://paper-glass-artistry-client.web.app).
+
+- **Server Site Repository:** [Server](https://github.com/mstsurnalyakter/paper-glass-artistry-server)
+
+
+## Concept & Overview:
+PaperGlassArtistry is a platform that showcases a wide range of paper crafts and glass art products. From handmade cards to intricate glass paintings, users can explore, add new Art & Craft Items, and Update and Delete their items. Users can see their added items in a separate route and filter the items based on customization.
 
 ## Features
 
@@ -15,9 +21,49 @@ Welcome to PaperGlassArtistry!
 - **Easy Navigation**: Our intuitive navigation makes it effortless to find the perfect art piece for your needs.
 - **Fast Loading Times**: Enjoy quick page load times for a smooth and efficient browsing experience, enhancing user satisfaction and engagement.
 
-## Category's Name: Paper Crafts & Glass Art
 
-## npm Packages Used
+## Getting Started
 
-- **React-simple-typewriter**
-- **React-tooltip**
+### Prerequisites
+
+Make sure you have the following installed:
+
+- Node.js
+- MongoDB
+- npm or yarn
+
+### Installation
+
+1. Client side repository:
+
+    a. Clone
+    ```sh
+    git clone https://github.com/mstsurnalyakter/paper-glass-artistry-client
+    cd paper-glass-artistry-client
+    ```
+
+    b. Install client dependencies:
+
+    ```sh
+    npm install
+    ```
+
+
+### Configuration
+
+Create a .env file in the client directory with the following environment variables:
+
+```env
+  VITE_APIKEY=
+  VITE_AUTHDOMAIN=
+  VITE_PROJECTID=
+  VITE_STORAGEBUCKET=
+  VITE_MESSAGINGSENDERID=
+  VITE_APPID=
+```
+
+### Run the client:
+
+```sh
+    npm run dev
+```
